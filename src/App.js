@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // import router with name as Router
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
 
 // import components
 import Sidebar from './components/Sidebar';
@@ -17,27 +17,32 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="container">
-          <div class="row">
+        <div className="container app_container">
+          <div class="row app_row">
             <div className="col-lg-3 col-md-12 col-sm-12">
               <Sidebar/>
             </div>
             <div className="col-lg-9 col-md-12 col-sm-12 app_main-content">
               <Navbar/>
-              {/* use exact attribute show only the exactly matching component 
-               otherwise it will render all the components when the '/' are matched*/}
-              <Route exact path="/">
-                <About/>
-              </Route>
+              {/* use switch to prevent redirection on refresh */}
+              <Switch>
+                {/* use exact attribute show only the exactly matching component 
+                otherwise it will render all the components when the '/' are matched*/}
+                <Route exact path="/">
+                  <About/>
+                </Route>
 
-              <Route exact path="/resume">
-                <Resume/>
-              </Route>
+                <Route exact path="/resume">
+                  <Resume/>
+                </Route>
 
-              <Route exact path="/projects">
-                <Projects/>
-              </Route>
+                <Route exact path="/projects">
+                  <Projects/>
+                </Route>
 
+                {/* redirect unknown url to home page */}
+                <Redirect to="/" />
+              </Switch>  
             </div>  
           </div>
         </div>

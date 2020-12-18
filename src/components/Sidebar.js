@@ -15,7 +15,7 @@ const Sidebar = () => {
             <div className="sidebar_name"> Mohamed <span>Shafnas</span></div>
             <div className="sidebar_item sidebar_title">Web Developer</div>
             <div className="sidebar_item">
-                <a className="btn btn-primary" href={resume} download="resume.pdf"><i class="fab fa-black-tie"></i> Download Resume</a>
+                <a className="btn btn-primary text-light" href={resume} download="resume.pdf"><i class="fab fa-black-tie"></i> Download Resume</a>
             </div>
             <div className="sidebar_social-icons mt-5 mb-3">
                 <a href="" className="mr-3"><i className="fab fa-2x fa-github black"></i></a>

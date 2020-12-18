@@ -11,10 +11,10 @@ body{
   background-image: linear-gradient(to right bottom, #000046,#1CB5E0);
   background-attachment: fixed;
 }
-.container{
+.app_container{
   padding-top: 3%;
 }
-.row{
+.app_row{
   height: 90vh;
 }
 
@@ -155,6 +155,57 @@ body{
   
 }
 /* navbar end */
+
+
+/* about start */
+.about{
+  padding: 1.5%;
+}
+
+.about_intro{
+  padding: 1%;
+}
+
+.about_container{
+  /* background-color: rgb(238, 237, 237); */
+  padding: 1.5%;
+}
+
+.about_heading{
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  color: #354358;
+}
+
+/* about end */
+
+/* skillcard start */
+
+.skill-card{
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border-bottom: 2px solid#3b5998;
+}
+
+.skill-card_icon{
+  width: 25%;
+}
+
+.skill-card-body{
+  margin-left: 3%;
+}
+.skill-card_title{
+  font-size: 19px;
+}
+.skill-card_text{
+  margin:0;
+  font-size: 0.9rem;
+}
+
+/* skillcard end */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
