@@ -2,22 +2,50 @@ import React from 'react';
 
 // import components
 import Skillcard from '../components/Skillcard';
+import Feature from '../components/Feature';
 
 // import images
 import design from '../assets/images/design.png'
 import developement from '../assets/images/develop.png'
+import fast from '../assets/images/fast.png';
+import responsive from '../assets/images/responsive.png';
+import ux from '../assets/images/ux.png';
+import dynamic from '../assets/images/dynamic.png';
 
 // creating array of data
 const skills = [
     {
         icon: design,
-        title: "lorem op",
-        desc:  "loersdsada"
+        title: "Web Design",
+        desc:  "Design Attractive and High User Friendly Websites."
     },
     {
         icon: developement,
-        title: "lorem op",
-        desc:  "loersdsada"
+        title: "Web Development",
+        desc:  "Develop High Secure and Dynamic Websites."
+    }
+];
+
+const features = [
+    {
+        icon: fast,
+        title: "Fast",
+        desc:  "Less load time and lag free."
+    },
+    {
+        icon: responsive,
+        title: "Responsive",
+        desc:  "Layouts will fit with any size of screen."
+    },
+    {
+        icon: ux,
+        title: "UX",
+        desc:  "User friendly navigation."
+    },
+    {
+        icon: dynamic,
+        title: "Dynamic",
+        desc:  "Make updates to website."
     }
 ];
 
@@ -39,6 +67,15 @@ const About = () => {
                         skills.map(skill => 
                             // pass property
                             <Skillcard skill={skill} />
+                        )
+                    }
+                </div>
+                <h6 className="feature_heading">Features</h6>
+                <div className="row mt-2">
+
+                    {
+                        features.map(feature => 
+                            <Feature feature={feature} />
                         )
                     }
                 </div>
