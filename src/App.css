@@ -11,6 +11,16 @@ body{
   background-image: linear-gradient(to right bottom, #000046,#1CB5E0);
   background-attachment: fixed;
 }
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-image: linear-gradient(to right bottom, #000046,#1CB5E0);
+  border-radius: 5px;
+}
+
 .app_container{
   padding-top: 3%;
 }
@@ -71,6 +81,7 @@ body{
   text-decoration: none;
   color: #000;
   opacity: 0.8;
+  background-color: #0e76a8;
 }
 
 .sidebar_item a:hover{
@@ -90,7 +101,7 @@ body{
   color: #25D366;
 }
 
-.sidebar_social-icons .light-blue{
+.light-blue{
   color: #0e76a8;
 }
 
@@ -237,6 +248,100 @@ body{
   margin-top: 2%;
 }
 /* end feature card */
+
+/* resume start */
+
+.resume{
+  padding-top: 20px;
+}
+
+.resume-card_heading,.resume-language_heading{
+  margin-left: 3%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #354358;
+}
+
+.resume-card_body{
+  margin-top: 15px;
+}
+
+.resume-language_body{
+  margin-top: 25px;
+}
+
+.resume-card_title{
+  font-size: 1.1rem;
+  margin-left: 2%;
+  text-align: left;
+}
+
+.resume-card_desc{
+  font-size: 1rem;
+  text-align: left;
+  margin-left: 2%;
+}
+
+/* bar start */
+.bar{
+  width: 98%;
+  background-color: #f1f2f3;
+  border-radius: 30px;
+  margin-bottom: 12px;
+}
+
+.bar_wrapper{
+  background-image: linear-gradient(90deg, #0c0c91,#1CB5E0);
+  border-radius: 30px;
+  padding: 2px 14px;
+  color: #fff;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.icon{
+  color: rgb(238, 238, 238);
+}
+
+/* bar end */
+
+/* resume end */
+
+/* projects start */
+.projects{
+  height: 72vh;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+.card{
+  border: none;
+  border-radius: 10px !important;
+  border-bottom: 2px solid #3b5998;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.card-img-top{
+  transition: transform 0.6s;
+}
+
+.card-img-top:hover{
+  transform: scale(1.05);
+}
+
+.card .btn-primary{
+  background-color: #0e76a8;
+  border: none;
+}
+
+.card .btn-primary:hover{
+  background-color: #2582ad;
+  transition: 0.6s;
+  border: none;
+}
+/* end projects */
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

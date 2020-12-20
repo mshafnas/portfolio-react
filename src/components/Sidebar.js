@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 // import avatar
 import avatar from '../assets/images/shafnas-avatar.png';
 // import resume
@@ -24,9 +24,9 @@ const Sidebar = () => {
                 <a href="tel::+94770048000"><i className="fab fa-2x fa-whatsapp green"></i></a>
             </div>
             <div className="sidebar_contact">
-                <div className="sidebar_item"><i class="fas fa-envelope green"></i> mshafnas125@gmail.com</div>
-                <div className="sidebar_item"><i class="fab fa-whatsapp green"></i>&nbsp;<i className="fab fa-viber green"></i>&nbsp;<i className="fas fa-phone green"></i> +94770048000</div>
-                <div className="sidebar_item"><i class="fas fa-map-pin green"></i> Akurana, Sri Lanka</div>
+                <div className="sidebar_item"><i class="fas fa-envelope light-blue"></i> mshafnas125@gmail.com</div>
+                <div className="sidebar_item"><i class="fab fa-whatsapp light-blue"></i> +94770048000</div>
+                <div className="sidebar_item"><i class="fas fa-map-pin light-blue"></i> Akurana, Sri Lanka</div>
             </div>
             <div className="sidebar_item sidebar_email" onClick={handleEmailMe}>Email me!..</div>
         </div>
