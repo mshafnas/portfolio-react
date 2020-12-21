@@ -1,4 +1,5 @@
 import React from 'react';
+import {motion} from 'framer-motion';    
 
 // import components
 import Projectcard from '../components/Projectcard';
@@ -61,6 +62,7 @@ const projects = [
         btn_text: 'GitHub'
     }    
 ];
+
 
 const Projects = () => {
     return (

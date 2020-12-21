@@ -4,13 +4,14 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // import router with name as Router
 import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
-
+import {AnimatePresence} from 'framer-motion';
 // import components
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 import './App.css';
 
 function App() {
@@ -38,6 +39,10 @@ function App() {
 
                 <Route exact path="/projects">
                   <Projects/>
+                </Route>
+
+                <Route exact path="/contact">
+                  <Contact/>
                 </Route>
 
                 {/* redirect unknown url to home page */}

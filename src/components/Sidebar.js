@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
+
 // import avatar
 import avatar from '../assets/images/shafnas-avatar.png';
 // import resume
@@ -9,8 +11,27 @@ const Sidebar = () => {
     const handleEmailMe = () => {
         window.open("mailto:mshafnas125@gmail.com");
     }
+
+    const sidebar_variant = {
+        hidden: {
+            x: '-20vw',
+            
+        },
+
+        visible: {
+            x: 0,
+            transition: {
+                delay: 0.1, duration:0.5, type: "spring"
+            }
+        }
+    }
+
     return (
-        <div className="sidebar">
+        <motion.div className="sidebar"
+            variants = {sidebar_variant}
+            initial = 'hidden'
+            animate = 'visible' 
+        >
             <img src={avatar} alt="shafnas avatar" className="sidebar_avatar"/>
             <div className="sidebar_name"> Mohamed <span>Shafnas</span></div>
             <div className="sidebar_item sidebar_title">Web Developer</div>
@@ -29,7 +50,7 @@ const Sidebar = () => {
                 <div className="sidebar_item"><i class="fas fa-map-pin light-blue"></i> Akurana, Sri Lanka</div>
             </div>
             <div className="sidebar_item sidebar_email" onClick={handleEmailMe}>Email me!..</div>
-        </div>
+        </motion.div>
     );
 }
 

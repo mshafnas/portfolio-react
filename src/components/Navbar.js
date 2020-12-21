@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
 
 const Navbar = () => {
 
@@ -19,11 +20,34 @@ const Navbar = () => {
         else if (currentURL.endsWith('/projects')) {
             setActive('Projects');
         }
+        else if (currentURL.endsWith('/contact')) {
+            setActive('Contact');
+        }
 
     }, [active]);
 
+    const navbar_variant = {
+        hidden: {
+            y: '-30vh',
+            opacity: 0
+        },
+
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay: 0.2, duration:0.7, type: "spring"
+            }
+
+        }
+    }
+
     return (
-        <div className="navbar">
+        <motion.div className="navbar"
+            variants={navbar_variant}
+            initial= 'hidden'
+            animate='visible'
+        >
             <div className="navbar_active">
                 {active}
             </div>
@@ -52,9 +76,15 @@ const Navbar = () => {
                         <div className="navbar_item" onClick={()=>setActive('Projects')}>Projects</div>
                     </Link>
                 }
-                
+                {/* show contact if the active state is not equal to contact */}
+                {
+                    active !== 'Contact' && 
+                    <Link to="/contact">
+                        <div className="navbar_item" onClick={()=>setActive('Contact')}>Contacts</div>
+                    </Link>
+                }
             </div>
-        </div>
+        </motion.div>
     );
 };
 
