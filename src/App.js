@@ -1,10 +1,8 @@
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // import router with name as Router
 import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
-import {AnimatePresence} from 'framer-motion';
 // import components
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';

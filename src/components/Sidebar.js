@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 
 // import avatar
@@ -39,9 +38,9 @@ const Sidebar = () => {
                 <a className="btn btn-primary text-light" href={resume} download="resume.pdf"><i class="fab fa-black-tie"></i> Download Resume</a>
             </div>
             <div className="sidebar_social-icons mt-5 mb-3">
-                <a href="" className="mr-3"><i className="fab fa-2x fa-github black"></i></a>
-                <a href="" className="mr-3"><i className="fab fa-2x fa-linkedin-in light-blue"></i></a>
-                <a href="" className="mr-3"><i className="fab fa-2x fa-facebook blue"></i></a>
+                <a href="https://github.com/mshafnas" target="_blank" rel="noopener noreferrer" className="mr-3"><i className="fab fa-2x fa-github black"></i></a>
+                <a href="https://www.linkedin.com/in/farook-mohamed-shafnas-7002191ab/" target="_blank" rel="noopener noreferrer" className="mr-3"><i className="fab fa-2x fa-linkedin-in light-blue"></i></a>
+                <a href="https://www.facebook.com/mshafnaz1" target="_blank" rel="noopener noreferrer" className="mr-3"><i className="fab fa-2x fa-facebook blue"></i></a>
                 <a href="tel::+94770048000"><i className="fab fa-2x fa-whatsapp green"></i></a>
             </div>
             <div className="sidebar_contact">

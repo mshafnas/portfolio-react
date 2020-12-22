@@ -10,6 +10,7 @@
 body{
   background-image: linear-gradient(to right bottom, #000046,#1CB5E0);
   background-attachment: fixed;
+  font-family: sans-serif;
 }
 
 ::-webkit-scrollbar{
@@ -347,6 +348,21 @@ body{
 }
 /* end projects */
 
+/* contact start */
+.contact{
+  padding: 1.5%;
+  text-align: left;
+}
+
+.contact-img{
+  width: 100%;
+}
+
+.contact .btn-primary{
+  background-color: #0e76a8;
+}
+/* contact end */
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -357,6 +373,26 @@ body{
 @media only screen and (max-width:991px) {
   .app_main-content{
     margin: 30px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .app_main-content{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .navbar_active{
+    font-size: 1.3rem;
+  }
+
+  .navbar_item{
+    margin-left: 0px;
+    font-size: 1rem;
+  }
+
+  .skill-card_icon{
+    height: 65px;
   }
 }
 

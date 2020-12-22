@@ -7,7 +7,7 @@ const Projectcard = ({project: {image,title,desc,icon,link,btn_text}}) =>
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{desc}</p>
-                <a href={link} target="_blank" className="btn btn-primary btn-block"><i className={icon}></i>{btn_text}</a>
+                <a href={link} target="_blank" className="btn btn-primary btn-block" rel="noopener noreferrer"><i className={icon}></i>{btn_text}</a>
             </div>
         </div>
     </div>
